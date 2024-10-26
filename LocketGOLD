@@ -1,0 +1,13 @@
+#!url=https://github.com/Dungdeptrai2008/LocketGOLD.git
+#!name=Locket-NQDung_Gold
+#!desc=Crack By NQDung
+
+[Script]
+# ~ By NQDung
+# ～ Egern transfer to Shadowrocket & Surge & LanceX
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://github.com/Dungdeptrai2008/LocketGOLD.git.js, requires-body=true, max-size=-1, timeout=60
+
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://github.com/Dungdeptrai2008/LocketGOLD.git/js/deleteHeader.js, timeout=60
+
+[MITM]
+hostname = %APPEND% api.revenuecat.com
